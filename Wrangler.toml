@@ -1,0 +1,9 @@
+[build]
+command = "npm run build"  # Adjust if using different build command
+
+[build.upload]
+format = "directory" 
+dir = "dist"  # Change to your output directory (e.g., "build", "public")
+
+[env.production]
+route = "wizdevtech.com/*"  # Replace with your domain
