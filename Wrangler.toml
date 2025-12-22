@@ -1,12 +1,14 @@
 name = "wizdevtech-landing25"
 compatibility_date = "2024-12-01"
-main = ".cloudflare/worker.js"
+
+main = ".vercel/output/static/_worker.js"
 
 [build]
 command = "bun run build:worker"
 
-[env.production]
-pages_build_output_dir = ".next/standalone"
+[assets]
+directory = ".vercel/output/static"
+binding = "ASSETS"
 
-[env.preview]
-pages_build_output_dir = ".next/standalone"
+[env.production]
+pages_build_output_dir = ".vercel/output/static"
