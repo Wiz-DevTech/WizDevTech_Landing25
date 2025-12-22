@@ -31,8 +31,9 @@ jobs:
 
       - name: Publish to Cloudflare
         run: npx wrangler deploy --env=production
-        env:
-          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+       env:
+          CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           DB_USER: ${{ secrets.DB_USER }}
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
           DB_SERVER: ${{ secrets.DB_SERVER }}
