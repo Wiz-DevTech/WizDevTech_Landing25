@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev -p 3000 2>&1 | tee dev.log",
     "build": "next build && cp -r .next/static .next/standalone/.next/ && cp -r public .next/standalone/",
-    "deploy:prod": "wrangler pages deploy dist",
-    "deploy:preview": "wrangler pages deploy dist --branch $CF_BRANCH",
+    "deploy:prod": "wrangler pages deploy .next/standalone",
+    "deploy:preview": "wrangler pages deploy .next/standalone --branch $CF_BRANCH",
     "start": "NODE_ENV=production bun .next/standalone/server.js 2>&1 | tee server.log",
     "lint": "next lint",
     "db:push": "prisma db push",
@@ -87,6 +87,7 @@
     "@tailwindcss/postcss": "^4",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "wrangler": "^4.56.0",
     "bun-types": "^1.3.4",
     "eslint": "^9",
     "eslint-config-next": "15.3.5",
