@@ -31,10 +31,11 @@ jobs:
 
       - name: Publish to Cloudflare
         run: npx wrangler deploy --env=production
-       env:
+        env:
           CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          DB_USER: ${{ secrets.DB_USER }}
-          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-          DB_SERVER: ${{ secrets.DB_SERVER }}
-          DB_NAME: ${{ secrets.DB_NAME }}
+          # Only include DB secrets if you actually use them
+          # DB_USER: ${{ secrets.DB_USER }}
+          # DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          # DB_SERVER: ${{ secrets.DB_SERVER }}
+          # DB_NAME: ${{ secrets.DB_NAME }}
