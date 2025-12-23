@@ -1,4 +1,4 @@
-name = "wizdevtech-landing25"
+name = "wizdevtechlanding26"
 compatibility_date = "2024-12-01"
 
 main = ".vercel/output/static/_worker.js"
