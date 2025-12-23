@@ -1,15 +1,8 @@
 name = "wizdevtechlanding26"
 compatibility_date = "2024-12-01"
-
-# The _worker.js is likely in the .next/ directory
-main = ".worker.js"
+main = "worker.js"
 
 [build]
-command = "bun run build:worker"
-
-[site]
-bucket = ".next/static"
-entry-point = ".next/_worker.js"
+command = "echo 'Deploying your Next.js app...'"
 
 [env.production]
-# Production-specific configuration

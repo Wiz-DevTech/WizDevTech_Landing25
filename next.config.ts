@@ -8,11 +8,13 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  // Add this for Cloudflare Pages/Workers
-  output: 'export', // This generates static HTML files
-  // Optional: If you have images, add this
+  // NO output: 'export' since you have Edge Runtime API
   images: {
-    unoptimized: true, // Required for static export
+    unoptimized: true,
+  },
+  // Optional: Configure for Edge Runtime
+  experimental: {
+    // If you want to use Edge Runtime for all pages
   },
 };
 
