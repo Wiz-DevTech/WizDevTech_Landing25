@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev -p 3000 2>&1 | tee dev.log",
     "build": "next build",
-    "build:worker": "next build && npx @cloudflare/next-on-pages",
+    "build:worker": "node build-worker.js",
     "dev:worker": "npx wrangler dev",
     "deploy:worker": "npx wrangler deploy",
     "lint": "next lint",

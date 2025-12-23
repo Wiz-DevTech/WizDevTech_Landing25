@@ -1,15 +1,15 @@
 name = "wizdevtechlanding26"
 compatibility_date = "2024-12-01"
 
-main = ".vercel/output/static/_worker.js"
+# The _worker.js is likely in the .next/ directory
+main = ".worker.js"
 
 [build]
 command = "bun run build:worker"
 
-[assets]
-directory = ".vercel/output/static"
-binding = "ASSETS"
+[site]
+bucket = ".next/static"
+entry-point = ".next/_worker.js"
 
 [env.production]
-pages_build_output_dir = ".vercel/output/static"
-
+# Production-specific configuration
