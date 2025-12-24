@@ -1,0 +1,42 @@
+name = "wizdevtech-landing25"
+compatibility_date = "2024-12-01"
+main = "worker.js"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+NODE_VERSION = "22"
+NEXT_PUBLIC_SITE_URL = "https://wizdevtech.com"
+
+# For static assets (when serving from KV/R2)
+[[kv_namespaces]]
+binding = "ASSETS"
+id = "your-kv-namespace-id"  # Replace with your KV namespace ID
+
+# OR for R2 storage
+[[r2_buckets]]
+binding = "ASSETS_BUCKET"
+bucket_name = "your-assets-bucket"  # Replace with your R2 bucket name
+
+# Routes for your domain
+routes = [
+  "wizdevtech.com/*",
+  "www.wizdevtech.com/*"
+]
+
+# Development settings
+[dev]
+port = 8787
+local_protocol = "http"
+ip = "localhost"
+
+# Build configuration
+[build]
+command = "bun run build"
+upload.format = "service-worker"
+
+# Environment variables
+[env.production]
+vars = { ENVIRONMENT = "production" }
+
+[env.staging]
+vars = { ENVIRONMENT = "staging" }
