@@ -1,0 +1,145 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+          <head>
+            <meta charset="utf-8"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1"/>
+            <title>WizDevTech | Technology Execution Partners</title>
+            <style>
+              :root {
+                --background: 0 0% 100%;
+                --foreground: 222.2 84% 4.9%;
+                --primary: 222.2 47.4% 11.2%;
+                --secondary: 210 40% 96.1%;
+                --border: 214.3 31.8% 91.4%;
+              }
+              body { 
+                margin: 0; 
+                font-family: system-ui, -apple-system, sans-serif;
+                background: hsl(var(--background));
+                color: hsl(var(--foreground));
+              }
+              .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+              .bg-surface { background: hsl(var(--background)); }
+              .border-border { border-color: hsl(var(--border)); }
+              .text-primary { color: hsl(var(--primary)); }
+              .text-secondary { color: hsl(215, 20%, 65%); }
+            </style>
+            <script src="https://cdn.tailwindcss.com"></script>
+          </head>
+          <body class="min-h-screen bg-background">
+            <!-- Your actual header -->
+            <header class="border-b border-border bg-surface">
+              <div class="container">
+                <div class="flex items-center justify-between h-16">
+                  <div class="flex items-center">
+                    <h1 class="text-xl font-bold text-primary">WizDevTech</h1>
+                  </div>
+                  <nav class="hidden md:flex items-center space-x-6">
+                    <a href="#what-we-do" class="text-secondary hover:text-primary transition-colors">What We Do</a>
+                    <a href="#how-it-works" class="text-secondary hover:text-primary transition-colors">How It Works</a>
+                    <a href="#who-its-for" class="text-secondary hover:text-primary transition-colors">Who It's For</a>
+                    <a href="#leadership" class="text-secondary hover:text-primary transition-colors">Leadership</a>
+                    <a href="#start-execution" class="text-secondary hover:text-primary transition-colors">Start Execution</a>
+                  </nav>
+                  <button class="px-4 py-2 border border-gray-300 rounded-lg text-primary hover:bg-gray-50">
+                    Start Execution
+                  </button>
+                </div>
+              </div>
+            </header>
+
+            <!-- Hero Section -->
+            <main class="flex-1">
+              <section class="py-24 md:py-32 bg-surface">
+                <div class="container">
+                  <div class="max-w-4xl mx-auto text-center">
+                    <h1 class="text-4xl md:text-6xl font-bold text-primary mb-8">
+                      Embedded Execution for Teams Who Need Things Finished
+                    </h1>
+                    <p class="text-xl text-secondary mb-12 max-w-2xl mx-auto leading-relaxed">
+                      Enter your existing systems, complete what's half-done, stabilize what's breaking, and exit cleanly. 
+                      No vision, no teaching—just execution.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                      <button class="px-8 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700">
+                        Start Execution
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- What We Do -->
+              <section id="what-we-do" class="py-24">
+                <div class="container">
+                  <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-16">
+                      <h2 class="text-3xl font-bold text-primary mb-6">What We Do</h2>
+                      <p class="text-lg text-secondary max-w-2xl mx-auto leading-relaxed">
+                        We provide embedded execution inside active systems. Engagements are 2–6 weeks, scoped, and end with documented handoff.
+                      </p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8">
+                      <div class="p-6 bg-gray-50 rounded-xl">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Finish Half-Built Systems</h3>
+                        <p class="text-gray-600">Complete tools, documentation, boards, and setups that were started but never finished.</p>
+                      </div>
+                      <div class="p-6 bg-gray-50 rounded-xl">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Repair Breaking Workflows</h3>
+                        <p class="text-gray-600">Fix automation and processes that are failing downstream.</p>
+                      </div>
+                      <div class="p-6 bg-gray-50 rounded-xl">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Clean & Handoff Data</h3>
+                        <p class="text-gray-600">Migrate, organize, and structure data with clear documentation.</p>
+                      </div>
+                      <div class="p-6 bg-gray-50 rounded-xl">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Convert Notes to Tasks</h3>
+                        <p class="text-gray-600">Transform meeting notes, voice memos, and scattered ideas into completed tasks.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- API Test Section -->
+              <section class="py-12 bg-gray-100">
+                <div class="container text-center">
+                  <h3 class="text-2xl font-bold mb-4">API Status</h3>
+                  <p class="mb-4">Your API endpoint is live at <code class="bg-gray-800 text-white px-2 py-1 rounded">/api</code></p>
+                  <button onclick="testApi()" class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">
+                    Test API Connection
+                  </button>
+                  <pre id="api-result" class="mt-4 text-left bg-gray-800 text-white p-4 rounded-lg hidden max-w-2xl mx-auto"></pre>
+                </div>
+              </section>
+            </main>
+
+            <!-- Footer -->
+            <footer class="border-t border-border bg-surface mt-auto">
+              <div class="container py-8">
+                <div class="text-center">
+                  <p class="text-secondary text-sm">© 2024 WizDevTech. Embedded execution services for teams who need things finished.</p>
+                  <p class="text-xs text-gray-500 mt-2">Served from Cloudflare Workers • 2025-12-23T03:55:32.210Z</p>
+                </div>
+              </div>
+            </footer>
+
+            <script>
+              async function testApi() {
+                const result = document.getElementById('api-result');
+                result.textContent = 'Testing...';
+                result.classList.remove('hidden');
+                
+                try {
+                  const response = await fetch('/api');
+                  const data = await response.json();
+                  result.textContent = JSON.stringify(data, null, 2);
+                } catch (error) {
+                  result.textContent = 'Error: ' + error.message;
+                }
+              }
+            </script>
+          </body>
+        </html>
+      
