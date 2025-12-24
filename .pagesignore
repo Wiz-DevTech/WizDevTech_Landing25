@@ -1,0 +1,8 @@
+# Exclude cache files
+.next/cache/
+.next/cache/**
+.next/cache/webpack/
+
+# Optional: exclude other large unnecessary files
+node_modules/
+.git/
