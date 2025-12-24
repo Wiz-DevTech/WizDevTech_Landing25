@@ -1,4 +1,4 @@
-name = "wizdevtech-landing25"
+name = "wizdevtechlandingv1"
 compatibility_date = "2024-12-01"
 main = "worker.js"
 compatibility_flags = ["nodejs_compat"]
