@@ -5,6 +5,10 @@
   "scripts": {
     "dev": "next dev -p 3000",
     "build": "next build",
+    "start": "next start",
+    "pages:build": "bunx @cloudflare/next-on-pages",
+    "preview": "bunx wrangler pages dev",
+    "pages:deploy": "bunx wrangler pages deploy",
     "build:worker": "node build-worker.js",
     "dev:worker": "npx wrangler dev",
     "deploy:worker": "npx wrangler deploy",
